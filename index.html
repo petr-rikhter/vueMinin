@@ -15,10 +15,12 @@
         <div class="form-control">
           <input
             type="text"
-            v-bind:placeholder="placeholderString"
-            v-bind:value="inputValue"
+            :placeholder="placeholderString"
+            :value="inputValue"
+            @input="inputChangeHandler"
           />
         </div>
+        <h2>inputValue: {{ inputValue }}</h2>
         <button class="btn">Добавить</button>
         <hr />
       </div>
