@@ -18,6 +18,7 @@
             :placeholder="placeholderString"
             :value="inputValue"
             @input="inputChangeHandler"
+            @keyup.enter="addNewNote"
           />
         </div>
         <button class="btn" @click="addNewNote">Добавить</button>
