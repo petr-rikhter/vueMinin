@@ -9,13 +9,18 @@
     <link rel="stylesheet" href="theme.css" />
   </head>
   <body>
-    <div class="container pt-5" id="app">
-      <div class="card center">
-        <h1>{{ title }} {{ counter }}</h1>
-        <div>
-          <button class="btn primary" @click="counter++">Добавить</button>
-          <button class="btn danger" @click="counter--">Вычесть</button>
+    <div class="container" id="app">
+      <div class="card">
+        <h1>{{ title }}</h1>
+        <div class="form-control">
+          <input
+            type="text"
+            v-bind:placeholder="placeholderString"
+            v-bind:value="inputValue"
+          />
         </div>
+        <button class="btn">Добавить</button>
+        <hr />
       </div>
     </div>
 
