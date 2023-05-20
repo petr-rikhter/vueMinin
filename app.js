@@ -17,6 +17,9 @@ const App = {
         this.inputValue = null;
       }
     },
+    deleteSelectNote(indexOfNote) {
+      this.notes.splice(indexOfNote, 1);
+    },
   },
 };
 
