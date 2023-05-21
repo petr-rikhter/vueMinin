@@ -13,8 +13,8 @@
       <div class="card">
         <h1
           :style="{
-          color: inputValue.length < 5 ? 'darkred' : 'darkblue',
-          fontSize: inputValue.length < 5 ? '2rem' : '1.5rem',
+          color: inputValue && inputValue.length < 5 ? 'darkred' : 'darkblue',
+          fontSize: inputValue && inputValue.length < 5 ? '2rem' : '1.5rem',
         }"
         >
           {{ title }}
@@ -31,7 +31,9 @@
         <hr />
         <ul class="list" v-if="notes.length">
           <li class="list-item" v-for="(myNote, i) of notes">
-            {{ toUpperCase(myNote) }}
+            <span :class="myNote.length > 5 ? 'primary' : 'bold'"
+              >{{ toUpperCase(myNote) }}</span
+            >
             <button
               class="btn danger"
               v-if="notes.length"
