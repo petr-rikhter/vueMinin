@@ -31,7 +31,11 @@
         <hr />
         <ul class="list" v-if="notes.length">
           <li class="list-item" v-for="(myNote, i) of notes">
-            <span :class="myNote.length > 5 ? 'primary' : 'bold'"
+            <span
+              :class="{
+              'primary': true,
+              'bold': myNote.length > 5
+            }"
               >{{ toUpperCase(myNote) }}</span
             >
             <button
