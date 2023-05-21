@@ -44,6 +44,7 @@
             class="list-item"
             v-for="(item, i) in items"
             @click="items.splice(i, 1)"
+            :key="item"
           >
             {{ item }}&nbsp;
             <input type="text" @click.stop />
