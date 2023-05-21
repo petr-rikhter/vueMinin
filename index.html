@@ -42,7 +42,7 @@
         <ul class="list" v-if="items.length">
           <li
             class="list-item"
-            v-for="(item, i) in items"
+            v-for="(item, i) in eventItems"
             @click="items.splice(i, 1)"
             :key="item"
           >
