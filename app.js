@@ -17,8 +17,16 @@ const App = {
         this.inputValue = null;
       }
     },
+    toUpperCase(string) {
+      return string.toUpperCase();
+    },
     deleteSelectNote(indexOfNote) {
       this.notes.splice(indexOfNote, 1);
+    },
+  },
+  computed: {
+    doubleCountComputed() {
+      return this.notes.length * 2;
     },
   },
 };
