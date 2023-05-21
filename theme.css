@@ -232,6 +232,7 @@ h3 {
 
 .list-item:hover {
   background: #eee;
+  cursor: pointer;
 }
 
 .alert {
